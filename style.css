@@ -3,7 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     --background-color: #f0f4fa;
-    --font-family: sans-serif;
+    .custom{
+        display: flex;
+        align-items: center;
+    }
+    .custom-2{
+        display: flex;
+    }
 }
 
 img{
@@ -11,17 +17,13 @@ img{
     height: 15px;
 }
 
-
 .container{
     width: 100%;
-    height: 100vh;
+    height: 100vh; 
     background: wheat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: center;  
 }
 .calculator{
-    display: flex;
     flex-direction: column;
     border: 1px solid transparent;
     font-family: sans-serif;
@@ -29,73 +31,41 @@ img{
     border-radius: 8px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     width: 323px;
-    height: 528px;
+    height: 525px;
 }
 
 .top{
-    display: flex;
     justify-content: space-between;
-    padding-left: 20px;
-    padding-bottom: 10px;
+    padding: 0 0 10px 20px;
 }
 
 .top-left{
-    display: flex;
     margin-top: 10px;
     gap: 15px;
 }
 
 
 .text{
-    display: flex;
-    font-family: sans-serif;
     font-size: 12px;
 }
 
-.top-3-buttons{
-    display: flex;
-}
-
 .minimize{
-    width: 45px;
-    border: none;
-    background-color: var(--background-color);
-    height: 34px;
     padding-bottom: 5px;
 }
 
-.maximize{
+.maximize ,.minimize ,.cross{
     width: 45px;
     border: none;
     background-color: var(--background-color);
     height: 34px;
 }
-
-.cross{
-    width: 44px;
-    border-top-right-radius: 7px;
-    border-top-left-radius: 0%;
-    border-bottom-left-radius: 0%;
-    border: none;
-    background-color: var(--background-color);
-    height: 34px;
-}
- /* Done */
  
 .next-s{
-    display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
-h1{
-    font-size: 20px;
-}
-
-.under-top{
-    display: flex;
-    align-items: center;
-    font-family: sans-serif;
+b{
+    font-size: 21px;
 }
 
 .nav{
@@ -127,76 +97,42 @@ h1{
     background-color: var(--background-color);
 }
 
-/* Done*/
-
-
 .display{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    height: 100px;
+    padding: 36px 15px 0 0;
 }
-
-.screen{
-    width: 100%;
-    height: 102px;
-    border: none;
-    font-size: 3rem;
-    text-align: right;
-    padding: 1rem;
-    background-color: var(--background-color);
+.o{
+    font-size: 42px;
+    
 }
-
-/* Done */
 
 .ms{
-    display: flex;
     justify-content: space-between;
 }
 
 .non-b-ms{
-    display: flex;
     margin-top: 8px;
 }
 
 .mc{
     font-size: 12px;
-    font-family: var(--font-family);
     margin-left: 20px;
     color: #9b9b9b;
 }
 
 .mr{
     font-size: 12px;
-    font-family: var(--font-family);
     margin-left: 32px;
     color: #9b9b9b;
 }
 
 .button-ms{
-    display: flex;
     margin-right: 10px;
     margin-top: 1px;
 }
 
-.positive-m{
-    width: 48px;
-    height: 28px;
-    font-size: 13px;
-    padding-top: 2px;
-    border: none;
-    background-color: var(--background-color);
-}
-
-.negative-m{
-    width: 48px;
-    height: 28px;
-    font-size: 13px;
-    padding-top: 2px;
-    border: none;
-    background-color: var(--background-color);
-}
-
-.just-s{
+.positive-m , .negative-m , .just-s{
     width: 48px;
     height: 28px;
     font-size: 13px;
@@ -212,261 +148,50 @@ h1{
 }
 
 .m{
-    font-family: var(--font-family);
     font-size: 12px;
     color: #9b9b9b;
 }
 
-
-/* Done */
-
-
-.bottom-p{
-    justify-content: space-between;
-    display: flex;
-}
-
 .rest-buttons{
-    padding-left: 3px;
+    padding: 10px 0 0 5px;
+    display: grid;
+    grid-template-columns: 75px 75px 75px 75px;
+    grid-template-rows: 47px 47px 47px 47px 47px 47px;
+    grid-row-gap: 4px;
+    grid-column-gap: 4px;
 }
 
-.first-row{
-    margin-top: 5px;
-}
 
-.second-row{
-    margin-top: 5px;
-}
-
-.third-row{
-    margin-top: 5px;
-}
-
-.fourth-row{
-    margin-top: 5px;
-}
-
-.fifth-row{
-    margin-top: 5px;
-}
-
-.last-row{
-    margin-top: 5px;
-}
-
-.percentage{
-    width: 77px;
-    height: 47px;
-    font-size: 17px;
-    border-radius: 4px;
-    background-color: #f7f9fd;
-    border: none;
-}
-
-.ce{
-    width: 77px;
-    height: 47px;
+.one-by-x ,.x-square ,.two-root-x ,.minus ,.plus ,.plus-minus ,.point ,.percentage ,.ce ,.c,.seven ,.eight ,.nine ,.four ,.five , .six ,.one ,.two ,.three ,.zero{
     font-size: 14px;
     border-radius: 4px;
     background-color: #f7f9fd;
     border: none;
 }
 
-.c{
-    width: 77px;
-    height: 47px;
-    font-size: 14px;
-    border-radius: 4px;
-    background-color: #f7f9fd;
-    border: none;
-}
-
-.del{
-    width: 71px;
-    height: 47px;
-    font-size: 14px;
-    border-radius: 4px;
-    background-color: #f7f9fd;
-    border: none;
-}
-
-.one-by-x{
-    width: 77px;
-    height: 47px;
-    font-size: 14px;
-    border-radius: 4px;
-    background-color: #f7f9fd;
-    border: none;
-}
-
-.x-square{
-    width: 77px;
-    height: 47px;
-    font-size: 14px;
-    border-radius: 4px;
-    background-color: #f7f9fd;
-    border: none;
-}
-
-.two-root-x{
-    width: 77px;
-    height: 47px;
-    font-size: 14px;
-    border-radius: 4px;
-    background-color: #f7f9fd;
-    border: none;
-}
-
-.divide{
-    width: 71px;
-    height: 47px;
+.divide ,.multiply ,.minus ,.del ,.equal{
     font-size: 16px;
     border-radius: 4px;
     background-color: #f7f9fd;
     border: none;
 }
 
-.seven{
-    width: 77px;
-    height: 47px;
+.seven ,.eight ,.nine ,.four ,.five , .six ,.one ,.two ,.three ,.zero{
     font-size: 18px;
-    border-radius: 4px;
-    border: none;
-    background-color: #ffffff;
-}
-
-.eight{
-    width: 77px;
-    height: 47px;
-    font-size: 18px;
-    border-radius: 4px;
-    border: none;
-    background-color: #ffffff;
-}
-
-.nine{
-    width: 77px;
-    height: 47px;
-    font-size: 18px;
-    border-radius: 4px;
-    border: none;
-    background-color: #ffffff;
-}
-
-.multiply{
-    width: 71px;
-    height: 47px;
-    font-size: 16px;
-    border-radius: 4px;
-    background-color: #f7f9fd;
-    border: none;
-}
-
-.four{
-    width: 77px;
-    height: 47px;
-    font-size: 18px;
-    border-radius: 4px;
-    background-color: #ffffff;
-    border: none;
-}
-
-.five{
-    width: 77px;
-    height: 47px;
-    font-size: 18px;
-    border-radius: 4px;
-    border: none;
-    background-color: #ffffff;
-}
-
-.six{
-    width: 77px;
-    height: 47px;
-    font-size: 18px;
-    border-radius: 4px;
-    border: none;
-    background-color: #ffffff;
-}
-
-.minus{
-    width: 71px;
-    height: 47px;
-    font-size: 14px;
-    border-radius: 4px;
-    background-color: #f7f9fd;
-    border: none;
-}
-
-.one{
-    width: 77px;
-    height: 47px;
-    font-size: 18px;
-    border-radius: 4px;
-    background-color: #ffffff;
-    border: none;
-}
-
-.two{
-    width: 77px;
-    height: 47px;
-    font-size: 18px;
-    border-radius: 4px;
-    background-color: #ffffff;
-    border: none;
-}
-
-.three{
-    width: 77px;
-    height: 47px;
-    font-size: 18px;
-    border-radius: 4px;
-    background-color: #ffffff;
-    border: none;
-}
-
-.plus{
-    width: 71px;
-    height: 47px;
-    font-size: 14px;
-    border-radius: 4px;
-    background-color: #f7f9fd;
-    border: none;
+    background-color: #fff;
 }
 
 .plus-minus{
-    width: 77px;
-    height: 47px;
-    font-size: 14px;
-    border-radius: 4px;
-    background-color: #ffffff;
-    border: none;
+    background-color: #fff;
 }
 
-.zero{
-    width: 77px;
-    height: 47px;
-    font-size: 18px;
-    border-radius: 4px;
-    background-color: #ffffff;
-    border: none;
-}
+
 
 .point{
-    width: 77px;
-    height: 47px;
-    font-size: 14px;
     font-weight: 700;
-    border-radius: 4px;
-    background-color: #ffffff;
-    border: none;
+    background-color: #fff;
 }
 
 .equal{
-    width: 71px;
-    height: 47px;
-    font-size: 14px;
-    border-radius: 4px;
     background-color: #0067bf;
-    border: none;
 }
