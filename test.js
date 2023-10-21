@@ -37,11 +37,7 @@ numbers.forEach(button => {
 
 symbols.forEach(sym => {
     sym.addEventListener('click', (e) => {
-        step = 2;
-        display.innerHTML += e.target.innerHTML
-        let val = e.target.innerHTML
-        operation = val
-        console.log({ operation })
+
         if (operation) {
             if (operation === '-') {
                 result = firstNumber - secondNumber
@@ -56,6 +52,11 @@ symbols.forEach(sym => {
             firstNumber = result;
             secondcal = [];
         }
+        step = 2;
+        display.innerHTML += e.target.innerHTML
+        let val = e.target.innerHTML
+        operation = val
+        console.log({ operation })
     });
 });
 
