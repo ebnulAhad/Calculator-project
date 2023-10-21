@@ -18,7 +18,6 @@ img{
 }
 
 .container{
-    width: 100%;
     height: 100vh; 
     background: wheat;
     justify-content: center;  
@@ -128,8 +127,7 @@ b{
 }
 
 .button-ms{
-    margin-right: 10px;
-    margin-top: 1px;
+    margin-right: 2px;
 }
 
 .positive-m , .negative-m , .just-s{
