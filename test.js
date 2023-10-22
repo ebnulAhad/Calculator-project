@@ -1,7 +1,7 @@
 const display = document.querySelector('.display .o')
-const numbers = document.querySelectorAll('[data-number]')
-const symbols = document.querySelectorAll('[data-operation]')
-const equals  = document.querySelector('[data-equal]')
+const digits = document.querySelector('[data-number]')
+const operator = document.querySelector('[data-operation]')
+const equals = document.querySelector('[data-equal]')
 const allClear= document.querySelector('[data-allClear')
 
 let firstNumber = 0
@@ -18,8 +18,8 @@ let step = 0
 
 let result = 0
 
-numbers.forEach(button => {
-    button.addEventListener('click', (e) => {
+
+    digits.addEventListener('click', (e) => {
         display.innerHTML += e.target.innerHTML
         let val = e.target.innerHTML
         if (step === 0 ) {
@@ -33,11 +33,10 @@ numbers.forEach(button => {
             console.log({secondNumber})
         }
     })
-})
 
-symbols.forEach(sym => {
-    sym.addEventListener('click', (e) => {
 
+
+    operator.addEventListener('click', (e) => {
         if (operation) {
             if (operation === '-') {
                 result = firstNumber - secondNumber
@@ -58,7 +57,7 @@ symbols.forEach(sym => {
         operation = val
         console.log({ operation })
     });
-});
+
 
 
 

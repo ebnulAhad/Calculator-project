@@ -131,7 +131,7 @@ b{
 }
 
 .positive-m , .negative-m , .just-s{
-    width: 48px;
+    width: 47px;
     height: 28px;
     font-size: 13px;
     padding-top: 2px;
@@ -150,15 +150,40 @@ b{
     color: #9b9b9b;
 }
 
-.rest-buttons{
-    padding: 10px 0 0 5px;
+.rest-buttons {
+    padding: 10px 2px 0 5px;
     display: grid;
-    grid-template-columns: 75px 75px 75px 75px;
-    grid-template-rows: 47px 47px 47px 47px 47px 47px;
-    grid-row-gap: 4px;
-    grid-column-gap: 4px;
+    grid-template-columns: 3fr 75px;
 }
 
+
+.upper-btns {
+    display: grid;
+    grid-template-columns: 75px 75px 75px;
+    grid-template-rows: 47px 47px ;
+    grid-row-gap: 5px;
+    grid-column-gap:5px;
+}
+
+.digits {
+    display: grid;
+    grid-template-columns: 75px 75px 75px;
+    grid-template-rows: 47px 47px 47px 47px  ;
+    grid-row-gap: 5px;
+    grid-column-gap:5px;
+    padding-top: 5px;
+}
+
+.operators {
+    display: grid;
+    grid-template-rows: 47px 47px 47px 47px 47px 47px;
+    grid-row-gap: 5px;
+}
+
+.e-btn {
+    display: grid;
+    grid-template-rows: 47px
+}
 
 .one-by-x ,.x-square ,.two-root-x ,.minus ,.plus ,.plus-minus ,.point ,.percentage ,.ce ,.c,.seven ,.eight ,.nine ,.four ,.five , .six ,.one ,.two ,.three ,.zero{
     font-size: 14px;
@@ -167,7 +192,7 @@ b{
     border: none;
 }
 
-.divide ,.multiply ,.minus ,.del ,.equal{
+ .divide ,.multiply ,.minus ,.del ,.equal{
     font-size: 16px;
     border-radius: 4px;
     background-color: #f7f9fd;
