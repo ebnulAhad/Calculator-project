@@ -18,10 +18,25 @@ let step = 0
 
 let result = 0
 
-
+function calculation() {
+    if (operation) {
+        if (operation === '-') {
+            result = firstNumber - secondNumber;
+        } else if (operation === '+') {
+            result = firstNumber + secondNumber;
+        } else if (operation === '*') {
+            result = firstNumber * secondNumber;
+        } else if (operation === '/') {
+            result = firstNumber / secondNumber;
+        }
+        firstcal = [result];
+        firstNumber = result;
+        secondcal = [];
+    }
+}
     digits.addEventListener('click', (e) => {
-        display.innerHTML += e.target.innerHTML
-        let val = e.target.innerHTML
+        display.innerHTML += e.target.value
+        let val = e.target.value
         if (step === 0 ) {
             firstcal.push(val)
             firstNumber = parseFloat(firstcal.join(''))
@@ -37,23 +52,10 @@ let result = 0
 
 
     operator.addEventListener('click', (e) => {
-        if (operation) {
-            if (operation === '-') {
-                result = firstNumber - secondNumber
-            } else if (operation === '+') {
-                result = firstNumber + secondNumber
-            } else if (operation === '*') {
-                result = firstNumber * secondNumber
-            } else if (operation === '/') {
-                result = firstNumber / secondNumber
-            }
-            firstcal = [result]
-            firstNumber = result;
-            secondcal = [];
-        }
+        calculation()
         step = 2;
-        display.innerHTML += e.target.innerHTML
-        let val = e.target.innerHTML
+        display.innerHTML += e.target.value
+        let val = e.target.value
         operation = val
         console.log({ operation })
     });
@@ -62,19 +64,8 @@ let result = 0
 
 
 equals.addEventListener('click', (e) => {
-    
     secondcal = []
-
-    if (operation === '-') {
-        result = firstNumber - secondNumber 
-    }
-     else if (operation === '*') {
-        result = firstNumber * secondNumber
-    } else if (operation === '+') {
-        result = firstNumber + secondNumber
-    } else if (operation === '/') {
-        result = firstNumber / secondNumber
-    }
+    calculation()
     display.innerHTML = result
     console.log(result)
     step = 0;
